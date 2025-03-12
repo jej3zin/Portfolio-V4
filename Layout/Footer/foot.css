@@ -1,0 +1,37 @@
+.foot {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background: var(--Backg);
+}
+.logo-social {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.foot-txt {
+  font-weight: 300;
+  color: var(--Col);
+}
+@media only screen and (max-device-width: 1026px) {
+  .logo-social {
+    width: 70%;
+  }
+}
+@media only screen and (max-device-width: 430px) {
+  .logo-social {
+    width: 100%;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+  .foot-icons {
+    font-size: 1.8rem;
+  }
+  .foot-txt {
+    font-size: 1rem;
+  }
+}
