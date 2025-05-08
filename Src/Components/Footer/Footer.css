@@ -1,0 +1,13 @@
+.foot {
+  height: 8vh;
+  padding: 2rem 0;
+  color: var(--Col-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: var(--Border-1);
+  & p {
+    font-size: var(--Text-1);
+    font-weight: 300;
+  }
+}

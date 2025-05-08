@@ -1,0 +1,76 @@
+.head {
+  height: 8vh;
+  padding: var(--Pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: var(--Border-1);
+}
+.LogoLink {
+  color: var(--Col-1);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+  & img {
+    height: 3rem;
+    width: 3rem;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  & h1 {
+    font-size: var(--Title-2);
+  }
+}
+.head-menu {
+  display: flex;
+  align-items: center;
+  & ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+}
+.menu-list {
+  display: flex;
+  align-items: center;
+}
+.menu_link {
+  padding: 0.3rem 0;
+  color: var(--Col-1);
+  text-decoration: none;
+  position: relative;
+  border: 1px solid transparent;
+  &:hover {
+    color: var(--Col-2);
+  }
+}
+.menu_link::after {
+  content: '';
+  height: 0.1rem;
+  width: 0%;
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  background: var(--Col-2);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+}
+.menu_link:hover:after {
+  width: 100%;
+  left: 0;
+}
+.tabActive {
+  color: var(--Col-2);
+}
+.tabActive::after {
+  content: '';
+  height: 0.1rem;
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: var(--Col-2);
+  transition: var(--Ani-1);
+}
