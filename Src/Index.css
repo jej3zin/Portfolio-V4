@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Serif+Display:ital,wdth,wght@0,62.5,100..900;1,62.5,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+:root {
+  --Pad: 0 3rem;
+  --Bg-1: #222;
+  --Bg-2: #444;
+  --Bg-3: rgba(255, 255, 255, 0.02);
+  --Col-1: #ddd;
+  --Col-2: #6e5eff;
+  --Title-1: 1.4rem;
+  --Title-2: 1.2rem;
+  --Text-1: 1rem;
+  --Icon-1: 1.5rem;
+  --Icon-2: 1.7rem;
+  --Border-1: 1.4px solid #4f4f4f;
+  --Ani-1: 0.3s all ease-in-out;
+  --Ani-2: 0.2s all ease-in-out;
+}
+::-webkit-scrollbar {
+  height: 0.6rem;
+  width: 0.6rem;
+  background: var(--Bg-1);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--Col-2);
+}
+::selection {
+  background-color: var(--Col-2);
+  color: var(--Bg-1);
+}
+body {
+  background: var(--Bg-1);
+}
+#preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: var(--Bg-1);
+
+  & .Loader {
+    width: 4rem;
+    height: 4rem;
+    color: var(--Col-1);
+    display: flex;
+    position: relative;
+  }
+}
+.Loader::after,
+.Loader::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  border: 3px solid var(--Col-1);
+  animation: animloader 2s linear infinite;
+}
+.Loader::after {
+  animation-delay: 1s;
+}
+@keyframes animloader {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+ion-icon {
+  font-size: var(--icon);
+}
